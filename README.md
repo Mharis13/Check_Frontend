@@ -1,5 +1,15 @@
 # Chek
 
+## Project Requirements
+
+- [pnpm v12+](https://pnpm.io/installation)
+
+## Run project
+
+- run `pnpm install` to install dependencies.
+- run `pnpm run start` to start the app.
+- run `pnpm test` to run tests.
+
 ## Expo Go
 
 ### Requirements
