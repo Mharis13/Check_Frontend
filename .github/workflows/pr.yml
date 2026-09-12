@@ -1,0 +1,21 @@
+name: Pull Request Workflow
+on: [pull_request]
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v7
+
+    - name: Install pnpm
+    - uses: pnpm/setup@v1
+      with:
+        version: 12
+        runtime: node@26
+        cache: true
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run tests
+      run: pnpm test
+
