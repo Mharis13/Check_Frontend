@@ -1,6 +1,6 @@
 # Chek
 
-## How to run with Expo Go 
+## Expo Go
 
 ### Requirements
 
@@ -19,3 +19,17 @@
 ### Run in Android device
 
 TBD
+
+## PNPM
+
+### How to solve ERR_PNPM_IGNORED_BUILDS
+
+If pnpm stops with ERR_PNPM_IGNORED_BUILDS, the dependency install reached a package whose lifecycle build script is not approved.
+This avoids installing scripts that can harm the project or even you or your computer.
+
+1. Inspect the ignored builds with `pnpm ignored-builds`
+2. Verify that the packages tree is not suspicious with `pnpm why <package_name>`
+3. Check the packages scripts with `pnpm view <package_name> scripts`
+4. If everything looks fine you can approve the builds with `pnpm approve-builds` or explicitly with `pnpm approve-builds <package_name>`
+
+If the package looks suspicious **DO NOT** use it, is better to find an alternative than risking being hacked.
